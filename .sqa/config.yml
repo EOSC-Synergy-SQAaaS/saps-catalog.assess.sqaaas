@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/saps-catalog:
+      branch: develop
+      repo: https://github.com/EOSC-synergy/saps-catalog
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: 1.7.0_no_kubectl
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/EOSC-synergy/saps-catalog git:
+        commands:
+        - /usr/bin/env sh .sqa/script.lovely-amber-echidna.sh
+        container: qc.acc_foggy-taupe-barb
+  QC.Doc:
+    repos:
+      github.com/EOSC-synergy/saps-catalog find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-emerald-opossum.sh
+        container: qc.doc_wimpy-crimson-eel
+      github.com/EOSC-synergy/saps-catalog git:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-purple-chihuahua.sh
+        container: qc.doc_breezy-burgundy-dugong
+      github.com/EOSC-synergy/saps-catalog markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-cornflower-cockroach.sh
+        container: qc.doc_skinny-teal-retriever
+  QC.FAIR:
+    repos:
+      github.com/EOSC-synergy/saps-catalog F-UJI:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-goldenrod-centipede.sh
+        container: qc.fair_chewy-smalt-hound
+  QC.Lic:
+    repos:
+      github.com/EOSC-synergy/saps-catalog licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-aquamarine-husky.sh
+        container: qc.lic_nerdy-xanthic-turkey
+  QC.Sec:
+    repos:
+      github.com/EOSC-synergy/saps-catalog bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.lumpy-olive-echidna.sh
+        container: qc.sec_stinky-puce-leopard
+  QC.Sty:
+    repos:
+      github.com/EOSC-synergy/saps-catalog flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.skinny-amber-echidna.sh
+        container: qc.sty_pretty-gold-hare
+  QC.Ver:
+    repos:
+      github.com/EOSC-synergy/saps-catalog get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-tangerine-beaver.sh
+        container: qc.ver_thirsty-tan-lemming
+timeout: 1800

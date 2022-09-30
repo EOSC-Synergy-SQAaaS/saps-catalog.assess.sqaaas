@@ -15,50 +15,44 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/saps-catalog git:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-amber-echidna.sh
-        container: qc.acc_foggy-taupe-barb
+        - /usr/bin/env sh .sqa/script.jumpy-goldenrod-flounder.sh
+        container: qc.acc_sunny-mauve-buffalo
   QC.Doc:
     repos:
       github.com/EOSC-synergy/saps-catalog find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-emerald-opossum.sh
-        container: qc.doc_wimpy-crimson-eel
+        - /usr/bin/env sh .sqa/script.snazzy-cerise-labradoodle.sh
+        container: qc.doc_messy-malachite-coral
       github.com/EOSC-synergy/saps-catalog git:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-purple-chihuahua.sh
-        container: qc.doc_breezy-burgundy-dugong
+        - /usr/bin/env sh .sqa/script.flimsy-indigo-chihuahua.sh
+        container: qc.doc_queasy-harlequin-sloth
       github.com/EOSC-synergy/saps-catalog markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-cornflower-cockroach.sh
-        container: qc.doc_skinny-teal-retriever
-  QC.FAIR:
-    repos:
-      github.com/EOSC-synergy/saps-catalog F-UJI:
-        commands:
-        - /usr/bin/env sh .sqa/script.skimpy-goldenrod-centipede.sh
-        container: qc.fair_chewy-smalt-hound
+        - /usr/bin/env sh .sqa/script.randy-rose-chin.sh
+        container: qc.doc_woolly-auburn-hyena
   QC.Lic:
     repos:
       github.com/EOSC-synergy/saps-catalog licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-aquamarine-husky.sh
-        container: qc.lic_nerdy-xanthic-turkey
+        - /usr/bin/env sh .sqa/script.goopy-aqua-gorilla.sh
+        container: qc.lic_lousy-ultramarine-jackal
   QC.Sec:
     repos:
       github.com/EOSC-synergy/saps-catalog bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-olive-echidna.sh
-        container: qc.sec_stinky-puce-leopard
+        - /usr/bin/env sh .sqa/script.pretty-flax-dunker.sh
+        container: qc.sec_jumpy-apricot-dollar
   QC.Sty:
     repos:
       github.com/EOSC-synergy/saps-catalog flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-amber-echidna.sh
-        container: qc.sty_pretty-gold-hare
+        - /usr/bin/env sh .sqa/script.snazzy-champagne-bulldog.sh
+        container: qc.sty_sleepy-zucchini-vole
   QC.Ver:
     repos:
       github.com/EOSC-synergy/saps-catalog get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-tangerine-beaver.sh
-        container: qc.ver_thirsty-tan-lemming
+        - /usr/bin/env sh .sqa/script.crabby-eggplant-rhinoceros.sh
+        container: qc.ver_flabby-sepia-quoll
 timeout: 1800

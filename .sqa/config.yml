@@ -1,58 +1,58 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/saps-catalog:
-      branch: develop
-      repo: https://github.com/EOSC-synergy/saps-catalog
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: 1.7.0_no_kubectl
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/eosc-synergy/saps-catalog:
+      branch: develop
+      repo: https://github.com/eosc-synergy/saps-catalog
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/EOSC-synergy/saps-catalog git:
+      github.com/eosc-synergy/saps-catalog git:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-ecru-wolf.sh
-        container: qc.acc_cheeky-pear-dingo
+        - /usr/bin/env sh .sqa/script.beady-vermilion-setter.sh
+        container: qc.acc_crappy-cerulean-dunker
   QC.Doc:
     repos:
-      github.com/EOSC-synergy/saps-catalog find_doc_files.py:
+      github.com/eosc-synergy/saps-catalog find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-magenta-dogfish.sh
-        container: qc.doc_geeky-russet-barracuda
-      github.com/EOSC-synergy/saps-catalog git:
+        - /usr/bin/env sh .sqa/script.scaly-cinnabar-tarantula.sh
+        container: qc.doc_sloppy-buff-walrus
+      github.com/eosc-synergy/saps-catalog git:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-viridian-magpie.sh
-        container: qc.doc_homey-silver-bracke
-      github.com/EOSC-synergy/saps-catalog markdownlint:
+        - /usr/bin/env sh .sqa/script.greasy-harlequin-leopard.sh
+        container: qc.doc_bumpy-amaranth-mule
+      github.com/eosc-synergy/saps-catalog markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-amber-wallaby.sh
-        container: qc.doc_droopy-auburn-llama
+        - /usr/bin/env sh .sqa/script.homey-dandelion-drever.sh
+        container: qc.doc_snoopy-razzmatazz-rottweiler
   QC.Lic:
     repos:
-      github.com/EOSC-synergy/saps-catalog licensee:
+      github.com/eosc-synergy/saps-catalog licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-copper-yak.sh
-        container: qc.lic_lousy-apricot-spider
+        - /usr/bin/env sh .sqa/script.squirrely-copper-dogfish.sh
+        container: qc.lic_ugly-amethyst-akbash
   QC.Sec:
     repos:
-      github.com/EOSC-synergy/saps-catalog bandit:
+      github.com/eosc-synergy/saps-catalog bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-aqua-coati.sh
-        container: qc.sec_slimy-maroon-koala
+        - /usr/bin/env sh .sqa/script.gummy-lilac-monster.sh
+        container: qc.sec_slimy-orange-toad
   QC.Sty:
     repos:
-      github.com/EOSC-synergy/saps-catalog flake8:
+      github.com/eosc-synergy/saps-catalog flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-fuchsia-shrew.sh
-        container: qc.sty_cozy-ochre-spaniel
+        - /usr/bin/env sh .sqa/script.foggy-rose-dachshund.sh
+        container: qc.sty_crabby-jade-ray
   QC.Ver:
     repos:
-      github.com/EOSC-synergy/saps-catalog get_git_tags.py:
+      github.com/eosc-synergy/saps-catalog get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-chartreuse-earwig.sh
-        container: qc.ver_breezy-burgundy-audemer
+        - /usr/bin/env sh .sqa/script.cloudy-chestnut-dollar.sh
+        container: qc.ver_scaly-blue-heron
 timeout: 1800

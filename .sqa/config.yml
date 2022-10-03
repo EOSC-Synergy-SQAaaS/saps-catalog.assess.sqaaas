@@ -1,58 +1,58 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/saps-catalog:
-      branch: develop
-      repo: https://github.com/EOSC-synergy/saps-catalog
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: 1.7.0_no_kubectl
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/eosc-synergy/saps-catalog:
+      branch: develop
+      repo: https://github.com/eosc-synergy/saps-catalog
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/EOSC-synergy/saps-catalog git:
+      github.com/eosc-synergy/saps-catalog git:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-crimson-fly.sh
-        container: qc.acc_stealthy-lemon-reindeer
+        - /usr/bin/env sh .sqa/script.snappy-persimmon-kangaroo.sh
+        container: qc.acc_flaky-cinnabar-ray
   QC.Doc:
     repos:
-      github.com/EOSC-synergy/saps-catalog find_doc_files.py:
+      github.com/eosc-synergy/saps-catalog find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-buff-lemur.sh
-        container: qc.doc_foggy-russet-mole
-      github.com/EOSC-synergy/saps-catalog git:
+        - /usr/bin/env sh .sqa/script.muzzy-wisteria-mule.sh
+        container: qc.doc_bluesy-mauve-gar
+      github.com/eosc-synergy/saps-catalog git:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-sapphire-gar.sh
-        container: qc.doc_trippy-thistle-flamingo
-      github.com/EOSC-synergy/saps-catalog markdownlint:
+        - /usr/bin/env sh .sqa/script.messy-wheat-squid.sh
+        container: qc.doc_lovely-emerald-walrus
+      github.com/eosc-synergy/saps-catalog markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-crimson-kudu.sh
-        container: qc.doc_pretty-corn-caterpillar
+        - /usr/bin/env sh .sqa/script.sleepy-cinnabar-quail.sh
+        container: qc.doc_pretty-charcoal-fish
   QC.Lic:
     repos:
-      github.com/EOSC-synergy/saps-catalog licensee:
+      github.com/eosc-synergy/saps-catalog licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-cardinal-woodlouse.sh
-        container: qc.lic_sleazy-heliotrope-dog
+        - /usr/bin/env sh .sqa/script.messy-ochre-abyssinian.sh
+        container: qc.lic_stealthy-smalt-schnauzer
   QC.Sec:
     repos:
-      github.com/EOSC-synergy/saps-catalog bandit:
+      github.com/eosc-synergy/saps-catalog bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-maroon-moose.sh
-        container: qc.sec_cranky-peach-worm
+        - /usr/bin/env sh .sqa/script.stuffy-brown-oriole.sh
+        container: qc.sec_scaly-razzmatazz-wasp
   QC.Sty:
     repos:
-      github.com/EOSC-synergy/saps-catalog flake8:
+      github.com/eosc-synergy/saps-catalog flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-aqua-spaniel.sh
-        container: qc.sty_hasty-cardinal-buffalo
+        - /usr/bin/env sh .sqa/script.flabby-ecru-neanderthal.sh
+        container: qc.sty_pretty-pear-raccoon
   QC.Ver:
     repos:
-      github.com/EOSC-synergy/saps-catalog get_git_tags.py:
+      github.com/eosc-synergy/saps-catalog get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-lavender-cockroach.sh
-        container: qc.ver_randy-smalt-bombay
+        - /usr/bin/env sh .sqa/script.dorky-crimson-binturong.sh
+        container: qc.ver_flabby-aquamarine-crab
 timeout: 1800

@@ -1,4 +1,4 @@
 (
-cd github.com/eosc-synergy/saps-catalog &&
+cd github.com/EOSC-synergy/saps-catalog &&
     git rev-parse --is-inside-work-tree
 )

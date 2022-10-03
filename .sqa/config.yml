@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/eosc-synergy/saps-catalog git:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-vermilion-setter.sh
-        container: qc.acc_crappy-cerulean-dunker
+        - /usr/bin/env sh .sqa/script.cloudy-aqua-wolfhound.sh
+        container: qc.acc_frumpy-gold-vole
   QC.Doc:
     repos:
       github.com/eosc-synergy/saps-catalog find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-cinnabar-tarantula.sh
-        container: qc.doc_sloppy-buff-walrus
+        - /usr/bin/env sh .sqa/script.stuffy-turquoise-impala.sh
+        container: qc.doc_shabby-amethyst-gar
       github.com/eosc-synergy/saps-catalog git:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-harlequin-leopard.sh
-        container: qc.doc_bumpy-amaranth-mule
+        - /usr/bin/env sh .sqa/script.gloppy-khaki-oyster.sh
+        container: qc.doc_scanty-red-gharial
       github.com/eosc-synergy/saps-catalog markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-dandelion-drever.sh
-        container: qc.doc_snoopy-razzmatazz-rottweiler
+        - /usr/bin/env sh .sqa/script.scummy-cerise-ocelot.sh
+        container: qc.doc_stealthy-razzmatazz-barb
   QC.Lic:
     repos:
       github.com/eosc-synergy/saps-catalog licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-copper-dogfish.sh
-        container: qc.lic_ugly-amethyst-akbash
+        - /usr/bin/env sh .sqa/script.breezy-wisteria-chameleon.sh
+        container: qc.lic_snazzy-wisteria-tang
   QC.Sec:
     repos:
       github.com/eosc-synergy/saps-catalog bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-lilac-monster.sh
-        container: qc.sec_slimy-orange-toad
+        - /usr/bin/env sh .sqa/script.paltry-amber-gerbil.sh
+        container: qc.sec_ugly-amethyst-warthog
   QC.Sty:
     repos:
       github.com/eosc-synergy/saps-catalog flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-rose-dachshund.sh
-        container: qc.sty_crabby-jade-ray
+        - /usr/bin/env sh .sqa/script.goopy-scarlet-goose.sh
+        container: qc.sty_geeky-rust-hornet
   QC.Ver:
     repos:
       github.com/eosc-synergy/saps-catalog get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-chestnut-dollar.sh
-        container: qc.ver_scaly-blue-heron
+        - /usr/bin/env sh .sqa/script.gimpy-sapphire-hummingbird.sh
+        container: qc.ver_squirrely-orange-baboon
 timeout: 1800

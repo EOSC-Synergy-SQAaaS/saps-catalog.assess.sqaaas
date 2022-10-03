@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.7.0_no_kubectl
+      branch: release/1.7.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/eosc-synergy/saps-catalog:
       branch: develop
@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/eosc-synergy/saps-catalog git:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-myrtle-barracuda.sh
-        container: qc.acc_foggy-black-oriole
+        - /usr/bin/env sh .sqa/script.homey-brown-orangutan.sh
+        container: qc.acc_bluesy-alizarin-starfish
   QC.Doc:
     repos:
       github.com/eosc-synergy/saps-catalog find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-green-horse.sh
-        container: qc.doc_shaggy-sepia-jellyfish
+        - /usr/bin/env sh .sqa/script.sleazy-wisteria-tamarin.sh
+        container: qc.doc_pasty-tan-bracke
       github.com/eosc-synergy/saps-catalog git:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-blue-avocet.sh
-        container: qc.doc_sickly-thistle-capuchin
+        - /usr/bin/env sh .sqa/script.silly-magenta-turtle.sh
+        container: qc.doc_squirrely-zucchini-ragdoll
       github.com/eosc-synergy/saps-catalog markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-asparagus-buffalo.sh
-        container: qc.doc_lousy-denim-woodpecker
+        - /usr/bin/env sh .sqa/script.cranky-ultramarine-bird.sh
+        container: qc.doc_slaphappy-cobalt-millipede
   QC.Lic:
     repos:
       github.com/eosc-synergy/saps-catalog licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-aqua-mastiff.sh
-        container: qc.lic_snazzy-gamboge-mule
+        - /usr/bin/env sh .sqa/script.nippy-cerise-malamute.sh
+        container: qc.lic_sunny-sepia-robin
   QC.Sec:
     repos:
       github.com/eosc-synergy/saps-catalog bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-beige-wallaby.sh
-        container: qc.sec_bumpy-ecru-fousek
+        - /usr/bin/env sh .sqa/script.skinny-magnolia-dane.sh
+        container: qc.sec_chummy-myrtle-ibis
   QC.Sty:
     repos:
       github.com/eosc-synergy/saps-catalog flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-periwinkle-quokka.sh
-        container: qc.sty_gamy-khaki-ray
+        - /usr/bin/env sh .sqa/script.woolly-cerise-jackal.sh
+        container: qc.sty_leaky-cerulean-hound
   QC.Ver:
     repos:
       github.com/eosc-synergy/saps-catalog get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-crimson-heron.sh
-        container: qc.ver_dorky-mustard-owl
+        - /usr/bin/env sh .sqa/script.snazzy-ecru-kingfisher.sh
+        container: qc.ver_nerdy-linen-spoonbill
 timeout: 1800

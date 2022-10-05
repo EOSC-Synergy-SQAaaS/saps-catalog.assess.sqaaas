@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.7.0_no_kubectl
+      branch: feature/gosec
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/eosc-synergy/saps-catalog:
       branch: develop
@@ -15,44 +15,48 @@ sqa_criteria:
     repos:
       github.com/eosc-synergy/saps-catalog git:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-lime-gharial.sh
-        container: qc.acc_leaky-cerise-lynx
+        - /usr/bin/env sh .sqa/script.sickly-azure-tzu.sh
+        container: qc.acc_wiggy-flax-opossum
   QC.Doc:
     repos:
       github.com/eosc-synergy/saps-catalog find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-red-squirt.sh
-        container: qc.doc_sickly-viridian-caracal
+        - /usr/bin/env sh .sqa/script.geeky-celadon-fossa.sh
+        container: qc.doc_boozy-taupe-numbat
       github.com/eosc-synergy/saps-catalog git:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-blue-wolverine.sh
-        container: qc.doc_woolly-vermilion-bonobo
+        - /usr/bin/env sh .sqa/script.craggy-fuchsia-mammoth.sh
+        container: qc.doc_crappy-corn-bongo
       github.com/eosc-synergy/saps-catalog markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-cyan-ray.sh
-        container: qc.doc_lousy-puce-guppy
+        - /usr/bin/env sh .sqa/script.greasy-heliotrope-dragonfly.sh
+        container: qc.doc_cranky-ivory-chipmunk
   QC.Lic:
     repos:
       github.com/eosc-synergy/saps-catalog licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-russet-cheetah.sh
-        container: qc.lic_scaly-emerald-duck
+        - /usr/bin/env sh .sqa/script.tacky-bistre-moose.sh
+        container: qc.lic_crabby-yellow-squirrel
   QC.Sec:
     repos:
       github.com/eosc-synergy/saps-catalog bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-cinnamon-bear.sh
-        container: qc.sec_skinny-magnolia-goat
+        - /usr/bin/env sh .sqa/script.sunny-magnolia-lemming.sh
+        container: qc.sec_smelly-buff-flamingo
+      github.com/eosc-synergy/saps-catalog gosec:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-malachite-octopus.sh
+        container: qc.sec_skanky-amber-flounder
   QC.Sty:
     repos:
       github.com/eosc-synergy/saps-catalog flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-buff-cougar.sh
-        container: qc.sty_snoopy-magenta-bombay
+        - /usr/bin/env sh .sqa/script.skanky-malachite-eagle.sh
+        container: qc.sty_snappy-white-opossum
   QC.Ver:
     repos:
       github.com/eosc-synergy/saps-catalog get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-pear-bloodhound.sh
-        container: qc.ver_skanky-purple-jackal
+        - /usr/bin/env sh .sqa/script.shabby-green-jaguar.sh
+        container: qc.ver_sleepy-malachite-cockroach
 timeout: 1800
